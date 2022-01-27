@@ -2,20 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>Product Page</title>
-</head>
-<body>
+</head>  <head>
 <!--Your code goes below this line-->
 
-    
+    <div class="container has-text-centered">
+        <img src="data:image/png;base64,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" width="150" height="40">
+<nav aria-label="main navigation" class="navbar" role="navigation">
+
+    <div class="navbar-menu" id="navbarBasicExample">
+        <div class="navbar-start">
+            <a class="navbar-item">
+                home
+            </a>
+
+            <a class="navbar-item">
+                shop
+            </a>
+            <a class="navbar-item">
+                contact & about
+            </a>
+            <a class="navbar-item">
+                reviews
+            </a>
+        </div>
+    </div>
+    </div>
+
+</nav>
+
+<section class="hero is-default is-bold">
+    <div class="hero-head">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="columns is-vcentered">
+                    <div class="column is-5">
+                        <figure class="image is-4by3">
+                            <img alt="Description" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Taylor_Swift_-_Christmas_Tree_Farm.png">
+                        </figure>
+                    </div>
+                    <div class="column is-6 is-offset-1">
+                        <h1 class="title is-2">
+                            In my heart is a Christmas Tree farm
+                        </h1>
+                        <h2 class="subtitle is-4">
+                            Really cool magnet
+                        </h2>
+                        <br>
+                        <p class="has-text-centered">
+                            <a class="button is-medium is-info is-outlined">
+                                small - $5
+                            </a>
+                            <a class="button is-medium is-info is-outlined">
+                               big - $8
+                            </a>
+                            <a class="button is-medium is-info is-outlined">
+                           EXTREME - $20
+                        </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-foot">
+            <div class="container">
+                <div class="tabs is-centered">
+                    <ul>
+                        <li><a></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--cards-->
+<div class="columns is-centered" style="padding: 2rem">
+    <div class="column">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-2by1">
+                    <img alt="Placeholder image"
+                         src="https://wtamu.edu/~cbaird/sq/images/magnet_on_white.png">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4">Other Magnets</p>
+                        <p class="subtitle is-6">SO MANY MAGNETS!!!</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    Shop our wide variety of Taylor Swift magnets.
+                    <a>@taylorswift</a>.
+                    <a href="#">#style</a>
+                    <a href="#">#taylorsversion</a>
+                </div>
+            </div>
+            <footer class="card-footer">
+                <a href="#" class="card-footer-item">BUY NOW!</a>
+                <a href="#" class="card-footer-item">Small & Big Magnets</a>
+                <a href="#" class="card-footer-item">EXTREME magnets</a>
+            </footer>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-2by1">
+                    <img alt="Placeholder image"
+                         src="https://www.billboard.com/wp-content/uploads/2021/11/Taylor-Swift-2021-grammy-billboard-1548.jpg?w=1024">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4">Taylor Swift</p>
+                        <p class="subtitle is-6">Follow Taylor Swift on the social medias, SHE IS THE MUSIC INDUSTRY!!!!</p>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">instagram</a>
+                            <a href="#" class="card-footer-item">twitter</a>
+                            <a href="#" class="card-footer-item">tiktok</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="container">
+    <div class="columns is-multiline">
+        <div class="column is-8 is-offset-2 register">
+            <div class="columns">
+                <div class="column left">
+                    <h1 class="title is-1">really cool TAYLOR SWIFT merch</h1>
+                    <h2 class="subtitle colored is-4">We sell the best TS merch you ever saw.</h2>
+                    <p>If you love our website, you'll love our emails! Never miss out on the marvelous
+                        merch! </p>
+                </div>
+                <div class="column right has-text-centered">
+                    <h1 class="title is-4">Sign up today</h1>
+                    <p class="description">Enter your email below for updates from the store.</p>
+                    <form>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-medium" placeholder="Name" type="text">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-medium" placeholder="Email" type="email">
+                            </div>
+                        </div>
+                        <button class="button is-block is-danger is-fullwidth is-medium">Submit</button>
+                        <br/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--email-->
 <!--Your code goes above this line-->
-    
+
 <!--TESTS Remove the script line below when you are ready to make it a page on GitHub Pages-->
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
